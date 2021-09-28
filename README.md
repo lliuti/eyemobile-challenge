@@ -38,6 +38,12 @@ And for _JWT_SECRET_ you can create a MD5 hash (by typing anything at the text f
 After that, on the root folder of the project, run:
 
 ```
+npm install
+```
+
+and
+
+```
 docker compose up
 ```
 
