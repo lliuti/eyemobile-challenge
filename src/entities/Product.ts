@@ -16,10 +16,6 @@ class Product {
   @PrimaryColumn()
   readonly id: string;
 
-  // @Column()
-  // registered_by: string;
-
-  // @JoinColumn({ name: "registered_by" })
   @ManyToOne(() => User, (user) => user.products)
   registered_by: User;
 
@@ -31,6 +27,9 @@ class Product {
 
   @Column()
   amount: number;
+
+  @Column({ nullable: true })
+  image: string;
 
   @CreateDateColumn()
   created_at: Date;
