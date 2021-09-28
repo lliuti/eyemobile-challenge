@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+      - MYSQL_DATABASE=$TYPEORM_DATABASE
+    volumes:
+      - mysqldata:/data/mysql
+    ports:
+      - "3306:3306"
+
+  app:
+    build: .
+    depends_on:
+      - mysql
+    volumes:
+      - .:/usr/app
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    environment:
+      - TYPEORM_HOST=mysql
+    command: ["./wait-for-it.sh", "mysql:5432", "--", "npm", "run", "dev"]
+
+volumes:
+  mysqldata:
+    driver: local
