@@ -2,3 +2,4 @@ node_modules
 .git
 .vscode
 yarn.lock
+insomnia_collection
