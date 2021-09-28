@@ -10,6 +10,7 @@ https://www.docker.com/
 _(and docker-compose if you use linux/macos)_
 
 <br>
+
 First, clone this repository into a directory of your preference
 
 ```
@@ -38,4 +39,32 @@ After that, on the root folder of the project, run:
 
 ```
 docker compose up
+```
+
+---
+
+<br>
+
+## In case of errors:
+
+### Configure windows line endings issues:
+
+Windows users:
+
+```
+git config --global core.autocrlf input
+```
+
+MAC users:
+
+```
+brew install dos2unix
+find . -type f -exec dos2unix {} \;
+```
+
+LINUX users:
+
+```
+sudo apt-get install -y dos2unix
+sudo find . -type f -exec dos2unix {} \;
 ```
