@@ -4,8 +4,10 @@ NodeJS + Typescript API from Eyemobile challenge
 
 ## HOW TO RUN
 
-To run this API all you will need to install is: DOCKER
+To run this API all you will need to install is Docker. You can download it here:
 https://www.docker.com/
+
+_(and docker-compose if you use linux/macos)_
 
 <br>
 First, clone this repository into a directory of your preference
