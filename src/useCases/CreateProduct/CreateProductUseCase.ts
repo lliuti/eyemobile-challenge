@@ -9,6 +9,7 @@ class CreateProductUseCase {
     name,
     price,
     amount = 1,
+    image = null,
   }: ICreateProductDTO): Promise<void> {
     const productRepository = getCustomRepository(ProductRepository);
     const userRepository = getCustomRepository(UserRepository);
@@ -30,6 +31,7 @@ class CreateProductUseCase {
         name,
         price,
         amount,
+        image,
       });
 
       await productRepository.save(product);
