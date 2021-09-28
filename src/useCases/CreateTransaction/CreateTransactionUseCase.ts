@@ -1,9 +1,8 @@
 import { getCustomRepository } from "typeorm";
 import { ICreateTransactionDTO } from "../../dtos/ICreateTransactionDTO";
-import { ProductRepository } from "../../repositories/ProductRepository";
 import { TransactionRepository } from "../../repositories/TransactionRepository";
-import { getTransactionTotalPrice } from "../../services/getTransactionTotalPrice";
-import { subtractProductAmount } from "../../services/subtractProductAmount";
+import { getTransactionTotalPrice } from "../../utils/getTransactionTotalPrice";
+import { subtractProductAmount } from "../../utils/subtractProductAmount";
 
 class CreateTransactionUseCase {
   async execute({

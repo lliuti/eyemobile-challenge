@@ -1,5 +1,5 @@
 import { IGetTransactionPriceDTO } from "../../dtos/IGetTransactionPriceDTO";
-import { getTransactionTotalPrice } from "../../services/getTransactionTotalPrice";
+import { getTransactionTotalPrice } from "../../utils/getTransactionTotalPrice";
 
 class GetTransactionPriceUseCase {
   async execute({ name, amount }: IGetTransactionPriceDTO): Promise<number> {
