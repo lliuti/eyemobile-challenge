@@ -3,6 +3,7 @@ interface ICreateProductDTO {
   name: string;
   price: number;
   amount?: number;
+  image?: string;
 }
 
 export { ICreateProductDTO };
